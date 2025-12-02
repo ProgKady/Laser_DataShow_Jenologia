@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="683.0" prefWidth="1126.0" stylesheets="@primer-dark.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main_WindowController">
+   <children>
+      <Label layoutX="75.0" layoutY="51.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Machine Number" />
+      <JFXTextField fx:id="mid" alignment="CENTER" editable="false" labelFloat="true" layoutX="308.0" layoutY="139.0" prefHeight="36.0" prefWidth="724.0" promptText="Machine ID" style="-fx-font-weight: bold; -fx-background-radius: 3em;" />
+      <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="526.0" layoutY="633.0" onAction="#refreshaction" style="-fx-font-weight: bold; -fx-background-radius: 3em; -fx-background-color: #4059a9;" text="Refresh" />
+      <Label layoutX="77.0" layoutY="146.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Machine ID" />
+      <Label layoutX="77.0" layoutY="244.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Init Date" />
+      <Label layoutX="76.0" layoutY="346.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="End Date" />
+      <Label layoutX="76.0" layoutY="440.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Model" />
+      <Label layoutX="75.0" layoutY="535.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Units" />
+      <JFXTextField fx:id="mno" alignment="CENTER" editable="false" labelFloat="true" layoutX="308.0" layoutY="44.0" prefHeight="36.0" prefWidth="724.0" promptText="Machine Number" style="-fx-font-weight: bold; -fx-background-radius: 3em;" />
+      <JFXTextField fx:id="init" alignment="CENTER" editable="false" labelFloat="true" layoutX="308.0" layoutY="237.0" prefHeight="36.0" prefWidth="724.0" promptText="Init Date" style="-fx-font-weight: bold; -fx-background-radius: 3em;" />
+      <JFXTextField fx:id="end" alignment="CENTER" editable="false" labelFloat="true" layoutX="308.0" layoutY="339.0" prefHeight="36.0" prefWidth="724.0" promptText="End Date" style="-fx-font-weight: bold; -fx-background-radius: 3em;" />
+      <JFXTextField fx:id="model" alignment="CENTER" editable="false" labelFloat="true" layoutX="308.0" layoutY="433.0" prefHeight="36.0" prefWidth="724.0" promptText="Model" style="-fx-font-weight: bold; -fx-background-radius: 3em;" />
+      <JFXTextField fx:id="unit" alignment="CENTER" labelFloat="true" layoutX="308.0" layoutY="527.0" prefHeight="36.0" prefWidth="724.0" promptText="Units" style="-fx-font-weight: bold; -fx-background-radius: 3em;" />
+   </children>
+</AnchorPane>

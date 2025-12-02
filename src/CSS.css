@@ -1,0 +1,94 @@
+
+
+
+.viewerback
+{
+
+-fx-background-image : url("BG.jpg");
+
+}
+
+
+.performancee
+{
+
+-fx-graphic : url("performancee.png");
+
+}
+
+.technica
+{
+
+-fx-graphic : url("technica.png");
+
+}
+
+.punctuality
+{
+
+-fx-graphic : url("punctuality.png");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.machine
+{
+
+-fx-graphic : url("machine.png");
+
+}
+
+.idddd
+{
+
+-fx-graphic : url("id.png");
+
+}
+
+.init
+{
+
+-fx-graphic : url("init.png");
+
+}
+
+.enddd
+{
+
+-fx-graphic : url("end.png");
+
+}
+
+.model
+{
+
+-fx-graphic : url("model.png");
+
+}
+
+.unit
+{
+
+-fx-graphic : url("unit.png");
+
+}
+
+.perform
+{
+
+-fx-graphic : url("performance.png");
+
+}

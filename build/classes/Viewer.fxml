@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1268.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewerController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="319.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="426.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@tandc_logo.png" />
+               </image>
+            </ImageView>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 17;" text="T&amp;C" />
+            <Label text="Powered By" />
+            <ImageView fitHeight="47.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Kadysoft.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="refresh" buttonType="RAISED" onAction="#refreshaction" prefHeight="21.0" prefWidth="82.0" style="-fx-background-radius: 3em; -fx-background-color: green; -fx-font-weight: bold; -fx-text-fill: white;" text="Refresh" visible="false" />
+         </children>
+      </VBox>
+      <Accordion layoutX="10.0" layoutY="10.0">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no1" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id1" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init1" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end1" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod1" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit1" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro1" buttonType="RAISED" onAction="#pro1action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per1" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no11" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id11" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init11" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end11" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod11" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit11" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro11" buttonType="RAISED" onAction="#pro2action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per11" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no12" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id12" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init12" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end12" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod12" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit12" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro12" buttonType="RAISED" onAction="#pro3action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per12" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="3">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no13" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id13" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init13" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end13" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod13" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit13" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro13" buttonType="RAISED" onAction="#pro4action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per13" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="4">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no14" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id14" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init14" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end14" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod14" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit14" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro14" buttonType="RAISED" onAction="#pro5action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per14" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no15" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id15" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init15" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end15" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod15" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit15" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro15" buttonType="RAISED" onAction="#pro6action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per15" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no16" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id16" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init16" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end16" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod16" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit16" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro16" buttonType="RAISED" onAction="#pro7action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per16" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no17" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id17" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init17" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end17" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod17" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit17" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro17" buttonType="RAISED" onAction="#pro8action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per17" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no18" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id18" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init18" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end18" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod18" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit18" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro18" buttonType="RAISED" onAction="#pro9action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per18" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no19" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id19" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init19" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end19" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod19" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit19" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro19" buttonType="RAISED" onAction="#pro10action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per19" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.rowIndex="2">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no110" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id110" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init110" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end110" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod110" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit110" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro110" buttonType="RAISED" onAction="#pro11action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per110" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no111" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id111" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init111" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end111" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod111" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit111" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro111" buttonType="RAISED" onAction="#pro12action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per111" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no112" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id112" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init112" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end112" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod112" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit112" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro112" buttonType="RAISED" onAction="#pro13action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per112" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no113" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id113" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init113" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end113" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod113" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit113" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro113" buttonType="RAISED" onAction="#pro14action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per113" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no114" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id114" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init114" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end114" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod114" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit114" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro114" buttonType="RAISED" onAction="#pro15action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per114" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.rowIndex="3">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no115" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id115" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init115" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end115" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod115" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit115" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro115" buttonType="RAISED" onAction="#pro16action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per115" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no116" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id116" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init116" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end116" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod116" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit116" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro116" buttonType="RAISED" onAction="#pro17action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per116" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no117" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id117" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init117" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end117" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod117" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit117" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro117" buttonType="RAISED" onAction="#pro18action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per117" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Accordion layoutX="10.0" layoutY="10.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <panes>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Details">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="no118" alignment="TOP_LEFT" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="machine" stylesheets="@CSS.css" text="Machine Number" />
+                        <Label fx:id="id118" alignment="TOP_LEFT" layoutX="74.0" layoutY="100.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="idddd" stylesheets="@CSS.css" text="Machine ID" />
+                        <Label fx:id="init118" alignment="TOP_LEFT" layoutX="74.0" layoutY="115.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="init" stylesheets="@CSS.css" text="Init Date" />
+                        <Label fx:id="end118" alignment="TOP_LEFT" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="enddd" stylesheets="@CSS.css" text="End Date" />
+                        <Label fx:id="mod118" alignment="TOP_LEFT" layoutX="74.0" layoutY="146.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="model" stylesheets="@CSS.css" text="Model" />
+                        <Label fx:id="unit118" alignment="TOP_LEFT" layoutX="53.0" layoutY="133.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-radius: 3em; -fx-text-fill: black;" styleClass="unit" stylesheets="@CSS.css" text="Unit" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-font-weight: bold;" text="Productivity">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="210.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="7.0" />
+                           </opaqueInsets>
+                           <children>
+                              <JFXButton fx:id="pro118" buttonType="RAISED" onAction="#pro19action" style="-fx-background-radius: 3EM; -fx-background-color: #4059a9; -fx-text-fill: white;" text="Click to show productivity" />
+                              <Label fx:id="per118" styleClass="perform" stylesheets="@CSS.css" text="Performance : " />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</GridPane>

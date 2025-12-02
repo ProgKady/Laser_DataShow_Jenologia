@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.web.WebView?>
+
+<GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="879.0" prefWidth="1278.0" styleClass="viewerback" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewerController_New">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="829.0" minHeight="10.0" prefHeight="765.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#00bff3" height="93.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" />
+            <Pane prefHeight="114.0" prefWidth="455.0">
+               <children>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#00bff3" height="93.0" layoutX="1.0" layoutY="11.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="390.0" />
+                  <Label layoutX="14.0" layoutY="14.0" style="-fx-font-size: 25; -fx-font-weight: bold;" text="Laser Garments" />
+                  <Label graphicTextGap="10.0" layoutX="107.0" layoutY="44.0" prefHeight="58.0" prefWidth="29.0" style="-fx-font-size: 40; -fx-font-weight: bold; -fx-text-fill: white;" styleClass="technica" stylesheets="@CSS.css" underline="true" />
+                  <JFXTextField fx:id="allgarments" editable="false" layoutX="146.0" layoutY="44.0" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 30;" />
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="15.0" />
+               </opaqueInsets>
+            </Pane>
+            <Pane prefHeight="114.0" prefWidth="431.0">
+               <children>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#43c783" height="93.0" layoutX="11.0" layoutY="11.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="390.0" />
+                  <Label layoutX="25.0" layoutY="14.0" style="-fx-font-size: 25; -fx-font-weight: bold;" text="Performance" />
+                  <Label graphicTextGap="10.0" layoutX="100.0" layoutY="42.0" prefHeight="58.0" prefWidth="34.0" style="-fx-font-size: 40; -fx-font-weight: bold; -fx-text-fill: white;" styleClass="performancee" stylesheets="@CSS.css" underline="true" />
+                  <JFXTextField fx:id="allperformance" editable="false" layoutX="148.0" layoutY="42.0" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #43c783; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 30;" />
+               </children>
+            </Pane>
+            <Pane layoutX="164.0" layoutY="10.0" prefHeight="114.0" prefWidth="100.0">
+               <children>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#7d3c98" height="93.0" layoutX="11.0" layoutY="11.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="195.0">
+                     <effect>
+                        <DropShadow color="#978a8a" spread="0.19" />
+                     </effect></Rectangle>
+                  <Label contentDisplay="CENTER" layoutX="20.0" layoutY="20.0" style="-fx-font-size: 25; -fx-font-weight: bold;" text="Working" />
+                  <Label contentDisplay="CENTER" layoutX="20.0" layoutY="45.0" style="-fx-font-size: 25; -fx-font-weight: bold;" text="Machines" />
+                  <JFXTextField fx:id="workmach" editable="false" layoutX="148.0" layoutY="25.0" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 25; -fx-background-radius: 3em;">
+                     <opaqueInsets>
+                        <Insets right="15.0" />
+                     </opaqueInsets></JFXTextField>
+               </children>
+            </Pane>
+            <HBox alignment="TOP_RIGHT" prefHeight="114.0" prefWidth="505.0" spacing="30.0">
+               <children>
+                  <JFXButton fx:id="refresh" buttonType="RAISED" onAction="#refreshaction" prefHeight="32.0" prefWidth="86.0" text="Refresh" visible="false" />
+                  <JFXTextArea fx:id="areatoupdate" prefHeight="114.0" prefWidth="15.0" visible="false" />
+                  <StackPane fx:id="zeros" onMouseClicked="#zerosaction" prefHeight="104.0" prefWidth="540.0">
+                     <children>
+                        <Rectangle fx:id="rectangle" arcHeight="25.0" arcWidth="25.0" height="94.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="730.0" />
+                        <JFXTextField fx:id="dateoftoday" alignment="CENTER" editable="false" labelFloat="true" prefHeight="92.0" prefWidth="295.0" promptText="Last Update Was At : " style="-fx-font-weight: bold; -fx-font-size: 30; -fx-background-color: black; -fx-text-fill: white;" visible="false" />
+                        <JFXTextArea fx:id="readwrite" visible="false" />
+                     </children>
+                  </StackPane>
+                  <ImageView fx:id="tandcicon" fitHeight="108.0" fitWidth="83.0" onMouseClicked="#refre" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@laser.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets top="30.0" />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </HBox>
+      <GridPane alignment="CENTER" focusTraversable="true" gridLinesVisible="true" stylesheets="@cupertino-light.css" GridPane.rowIndex="2">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox fx:id="vboxpane1" onMouseClicked="#viewerhackeraction1" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh1" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno1" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog1" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff1" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod1" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children></VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit1" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children></VBox>
+                     </children></HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane2" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction2" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="1">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh11" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno11" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog11" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff11" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod11" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit11" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane3" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction3" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="2">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh12" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno12" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog12" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff12" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod12" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit12" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane4" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction4" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="3">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh13" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno13" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog13" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff13" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod13" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit13" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane5" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction5" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="4">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh14" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno14" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog14" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff14" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod14" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit14" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane6" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction6" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh15" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno15" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog15" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff15" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod15" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit15" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane7" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction7" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh16" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno16" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog16" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff16" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod16" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit16" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane8" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction8" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh17" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno17" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog17" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff17" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod17" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit17" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane9" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction9" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh18" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno18" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog18" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff18" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod18" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit18" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane10" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction10" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh19" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno19" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog19" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff19" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod19" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit19" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane11" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction11" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh110" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno110" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog110" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff110" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod110" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit110" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane12" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction12" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh111" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno111" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog111" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff111" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod111" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit111" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane13" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction13" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh112" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno112" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog112" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff112" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod112" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit112" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane14" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction14" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh113" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno113" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog113" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff113" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod113" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit113" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane15" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction15" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh114" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno114" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog114" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff114" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod114" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit114" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane16" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction16" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh115" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno115" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog115" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff115" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod115" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit115" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane17" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction17" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh116" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno116" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog116" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff116" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod116" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit116" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane18" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction18" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh117" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno117" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog117" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff117" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod117" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit117" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <Label fx:id="launchdate" text="Label" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <VBox fx:id="vboxpane19" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction19" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh118" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno118" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog118" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff118" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod118" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit118" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane20" layoutX="10.0" layoutY="10.0" onMouseClicked="#viewerhackeraction20" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.rowIndex="3">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh119" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno119" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog119" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff119" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod119" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit119" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane21" layoutX="10.0" onMouseClicked="#viewerhackeraction21" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.rowIndex="4">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh120" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno120" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog120" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff120" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod120" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit120" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="vboxpane22" layoutX="10.0" onMouseClicked="#viewerhackeraction22" prefHeight="200.0" prefWidth="100.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh121" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno121" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog121" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff121" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod121" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit121" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-size: 30; -fx-text-fill: red;" text="No Machine Connected" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="25.0" />
+               </padding></Label>
+            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-size: 30; -fx-text-fill: red;" text="No Machine Connected" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin></Label>
+            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-size: 30; -fx-text-fill: red;" text="No Machine Connected" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="25.0" />
+               </padding></Label>
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+            <VBox fx:id="vboxpane23" onMouseClicked="#viewerhackeraction23" prefHeight="200.0" prefWidth="100.0" spacing="3.0" style="-fx-background-color: #fcf3cf;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh122" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno122" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog122" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff122" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod122" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit122" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            
+            
+            
+            
+            
+            <VBox fx:id="vboxpane24" onMouseClicked="#viewerhackeraction24" prefHeight="200.0" prefWidth="100.0" spacing="3.0" style="-fx-background-color: #fcf3cf;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh123" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno123" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog123" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff123" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod123" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit123" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            
+            
+            
+            
+            
+            
+            <VBox fx:id="vboxpane25" onMouseClicked="#viewerhackeraction25" prefHeight="200.0" prefWidth="100.0" spacing="3.0" style="-fx-background-color: #fcf3cf;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="256.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Pane fx:id="refresh124" prefHeight="30.0" prefWidth="25.0" style="-fx-background-radius: 5em;" />
+                        <Label fx:id="mno124" alignment="CENTER" prefHeight="19.0" prefWidth="232.0" style="-fx-font-weight: bold; -fx-background-color: #93d7f3; -fx-background-radius: 1em; -fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="256.0" spacing="15.0">
+                     <children>
+                        <JFXTextField fx:id="nog124" editable="false" prefHeight="58.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 30;" text="0" />
+                        <Separator orientation="VERTICAL" prefHeight="73.0" prefWidth="14.0" />
+                        <Label prefHeight="58.0" prefWidth="46.0" style="-fx-text-fill: #1dbe6b; -fx-font-size: 40; -fx-font-weight: bold;" styleClass="punctuality" stylesheets="@CSS.css" />
+                        <JFXTextField fx:id="eff124" editable="false" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: transparent; -fx-text-fill: #43c783; -fx-font-weight: bold; -fx-font-size: 30;" text="\%0" />
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="9.0" prefWidth="256.0" />
+                  <HBox prefHeight="62.0" prefWidth="256.0" spacing="2.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="46.0" prefWidth="307.0">
+                           <children>
+                              <JFXTextField fx:id="mod124" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="61.0" prefWidth="124.0">
+                           <children>
+                              <JFXTextField fx:id="unit124" editable="false" prefHeight="58.0" prefWidth="239.0" style="-fx-background-color: #00bff3; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 25;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </VBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </GridPane>
+      <MenuBar prefHeight="20.0" prefWidth="1254.0" style="-fx-font-weight: bold;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#zerosaction" text="Clear Production" />
+                  <MenuItem mnemonicParsing="false" onAction="#newshiftaction" text="Start New Shift" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitaction" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#helpaction" text="Help" />
+                  <MenuItem mnemonicParsing="false" onAction="#aboutaction" text="About" />
+            </items>
+          </Menu>
+            <Menu fx:id="temomenu" mnemonicParsing="false" style="-fx-font-size: 50;" text="Kadysoft" />
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Pane prefHeight="73.0" prefWidth="1400.0">
+                     <children>
+                        <WebView fx:id="newsssss" prefHeight="73.0" prefWidth="1400.0" />
+                     </children>
+                  </Pane>
+               </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@CSS.css" />
+      <URL value="@dracula.css" />
+   </stylesheets>
+</GridPane>
